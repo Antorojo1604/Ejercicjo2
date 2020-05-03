@@ -1,0 +1,74 @@
+class ViajeroFrecuente:
+    __nrodeviajero=''
+
+    __DNI=''
+
+    __nombre=''
+
+    __apellido=''
+
+    __ma=''
+
+    
+
+    def __init__(self,nrodeviajero,DNI,nombre,apellido,ma):
+
+        self.__nrodeviajero=nrodeviajero
+
+        self.__DNI=DNI
+
+        self.__nombre=nombre
+
+        self.__apellido=apellido
+
+        self.__ma=int(ma)
+
+        
+
+    def __str__ (self):
+
+        return "%s %s %s %s %s" %(self.__nrodeviajero, self.__DNI, self.__nombre, self.__apellido, self.__ma)
+
+        
+
+    def CantidadtotaldeMillas (self):
+    
+        return self.__ma
+
+        
+
+    def acumularMillas (self,millas):
+
+        self.__ma=self.__ma+millas
+
+    
+
+    def canjearMillas (self,cant):
+
+        if self.__ma>=cant:
+
+            print("el cambio se puede realizar")
+
+            self.__ma=self.__ma-cant
+
+        else:
+
+            print('el cambio no se puede realizar')
+
+            
+
+    def getnrodeViajero (self):
+
+        return self.__nrodeviajero
+
+    
+
+    def mostrarnumero (self):
+
+        return "%d" %(self.__nrodeviajero)
+
+        
+
+        
+
+    
